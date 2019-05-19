@@ -15,42 +15,6 @@ function buildVideoBar(videoInfo) {
   date.id = 'date';
   views.id = 'views';
 
-  if (document.documentElement.clientWidth >= 1200) {
-    video.style.cssText = `\
-    min-width: ${0.2 * (document.documentElement.clientWidth - 16)}px;\
-    width: ${0.2 * (document.documentElement.clientWidth - 16)}px;\
-    margin-left: ${0.015 * (document.documentElement.clientWidth - 16)}px;\
-    margin-right: ${0.035 * (document.documentElement.clientWidth - 16)}px;\
-    `;
-  }
-
-  if (document.documentElement.clientWidth >= 900 && document.documentElement.clientWidth < 1200 ) {
-    video.style.cssText = `\
-      min-width: ${0.283 * (document.documentElement.clientWidth - 16)}px;\
-      width: ${0.283 * (document.documentElement.clientWidth - 16)}px;\
-      margin-left: ${0.022 * (document.documentElement.clientWidth - 16)}px;\
-      margin-right: ${0.03 * (document.documentElement.clientWidth - 16)}px;\
-      `;
-  }
-
-  if (document.documentElement.clientWidth >= 600 && document.documentElement.clientWidth < 900 ) {
-    video.style.cssText = `\
-    min-width: ${0.45 * (document.documentElement.clientWidth - 8)}px;\
-    width: ${0.45 * (document.documentElement.clientWidth - 8)}px;\
-    margin-left: ${0.02 * (document.documentElement.clientWidth - 8)}px;\
-    margin-right: ${0.03 * (document.documentElement.clientWidth - 8)}px;\
-    `;
-  }
-
-  if (document.documentElement.clientWidth < 600) {
-    video.style.cssText = `\
-    min-width: ${0.5 * (document.documentElement.clientWidth - 4)}px;\
-    width: ${0.5 * (document.documentElement.clientWidth - 4)}px;\
-    margin-left: ${0.25 * (document.documentElement.clientWidth - 4)}px;\
-    margin-right: ${0.25 * (document.documentElement.clientWidth - 4)}px;\
-    `;
-  }
-
   const titleText = document.createElement('div');
   titleText.id = 'titleText';
   titleText.innerHTML = `<a href="https://www.youtube.com/watch?v=${videoInfo.id}" style="color:white">${videoInfo.title}</a>`;

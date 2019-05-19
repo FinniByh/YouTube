@@ -37,6 +37,9 @@ function building() {
   buttons.appendChild(outerPages);
   outerPages.appendChild(pages);
   buttons.appendChild(rightButton);
+
+  leftButton.innerHTML = '<i class="fa fa-arrow-left"></i>';
+  rightButton.innerHTML = '<i class="fa fa-arrow-right"></i>';
 }
 
 export default building;

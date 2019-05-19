@@ -28,13 +28,13 @@ function requestAsking() {
     document.getElementById('innerMainBar').style.left = '0';
     if (currentRequest !== '') {
       token = request(currentRequest, 0)
-        .then ((response) => {
+        .then((response) => {
           currentToken = response;
         });
     }
   } else {
     token = request(currentRequest, currentToken)
-      .then ((response) => {
+      .then((response) => {
         currentToken = response;
       });
   }
@@ -91,7 +91,7 @@ function swipeRight() {
     page.textContent = currentPage;
     pageCount += 1;
     if (document.documentElement.clientWidth >= 1200) {
-      if (pageCount % 4 === 0) {
+      if (pageCount % 3 === 0) {
         requestAsking();
       }
     }
@@ -102,7 +102,7 @@ function swipeRight() {
       }
     }
     if (document.documentElement.clientWidth >= 600 && document.documentElement.clientWidth < 900) {
-      if (pageCount % 8 === 0) {
+      if (pageCount % 7 === 0) {
         requestAsking();
       }
     }
