@@ -167,8 +167,11 @@ buttons.addEventListener('click', (e) => {
   if (currentButton.id !== 'pages') {
     const buttonPage = currentButton.classList.value;
     currentLeft += (currentPage - buttonPage) * document.documentElement.clientWidth;
-    if (buttonPage > 5) {
+    if (buttonPage >= 5) {
       currentPagesLeft = -((buttonPage - 5) * 50);
+      document.getElementById('pages').style.left = `${currentPagesLeft}px`;
+    } else {
+      currentPagesLeft = 0;
       document.getElementById('pages').style.left = `${currentPagesLeft}px`;
     }
     document.getElementById('pages').childNodes[currentPage - 1].style.backgroundColor = 'red';
